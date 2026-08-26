@@ -1,0 +1,6 @@
+_verify/
+*.log
+.DS_Store
+Thumbs.db
+.netlify/
+node_modules/
