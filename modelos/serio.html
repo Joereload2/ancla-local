@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Modelo serio — Consulta Norte</title>
+  <meta name="robots" content="noindex" />
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,500;8..60,600&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet" />
+  <style>
+    * { box-sizing:border-box; margin:0; padding:0; }
+    body { font-family:"Source Sans 3",sans-serif; background:#f4f1ea; color:#1c2422; }
+    a { color:#1c4a42; }
+    .bar { display:flex; justify-content:space-between; gap:12px; padding:12px 6vw; background:#1c2422; color:#d7ddd9; font-size:13px; }
+    .bar a { color:#c5ddd6; }
+    header { display:flex; justify-content:space-between; align-items:baseline; padding:22px 6vw; border-bottom:1px solid #ddd6c8; }
+    .brand { font-family:"Source Serif 4",Georgia,serif; font-size:1.35rem; }
+    .wrap { width:min(880px, calc(100% - 12vw)); margin:0 auto; padding:48px 0 72px; }
+    h1 { font-family:"Source Serif 4",Georgia,serif; font-size:clamp(2rem,5vw,3.1rem); font-weight:600; line-height:1.15; max-width:18ch; }
+    .lede { margin:16px 0 28px; color:#4a5552; max-width:38rem; line-height:1.55; }
+    .hero-img { width:100%; height:280px; object-fit:cover; border-radius:4px; margin-bottom:36px; }
+    .grid { display:grid; grid-template-columns:1fr 1fr; gap:28px; }
+    h2 { font-family:"Source Serif 4",serif; font-size:1.35rem; margin-bottom:10px; }
+    table { width:100%; border-collapse:collapse; font-size:15px; }
+    td { padding:8px 0; border-bottom:1px solid #ddd6c8; }
+    .cta { display:inline-block; margin-top:28px; background:#1c4a42; color:#f4f1ea; text-decoration:none; padding:12px 18px; font-weight:600; }
+    .fine { margin-top:18px; font-size:13px; color:#6b736f; }
+    @media (max-width:700px) { .grid { grid-template-columns:1fr; } header { flex-direction:column; gap:6px; } }
+  </style>
+</head>
+<body>
+  <div class="bar">
+    <span>Modelo Ancla · Serio · contenido de ejemplo</span>
+    <a href="../index.html#trabajos">← Volver a Ancla</a>
+  </div>
+  <header>
+    <div class="brand">Consulta Norte</div>
+    <span>Odontología · Providencia</span>
+  </header>
+  <main class="wrap">
+    <h1>Primera valoración. Sin teatro y sin letra chica.</h1>
+    <p class="lede">Demo de una web de clínica: tipografía calma, horarios a la vista, un solo llamado. La confianza se lee antes que el eslogan.</p>
+    <img class="hero-img" src="../assets/dental.jpg" alt="Consultorio de ejemplo" />
+    <div class="grid">
+      <div>
+        <h2>Cómo empezamos</h2>
+        <p class="lede" style="margin:0">Una visita de 40 minutos: escucha, revisión y un plan escrito. El precio de esa valoración se informa por WhatsApp antes de agendar. No hay “sorpresa en caja”.</p>
+      </div>
+      <div>
+        <h2>Horario</h2>
+        <table>
+          <tr><td>Lunes a jueves</td><td>09:00 – 19:00</td></tr>
+          <tr><td>Viernes</td><td>09:00 – 16:00</td></tr>
+          <tr><td>Sábado</td><td>Con hora</td></tr>
+          <tr><td>Urgencia</td><td>Indicar en el mensaje</td></tr>
+        </table>
+      </div>
+    </div>
+    <a class="cta" href="https://wa.me/56959128603?text=Hola%20Consulta%20Norte%2C%20quiero%20agendar%20primera%20valoraci%C3%B3n">Agendar valoración</a>
+    <p class="fine">En un cliente real: nombre legal, RUT de boleta y profesional con registro. Este modelo no es un recinto existente.</p>
+  </main>
+</body>
+</html>

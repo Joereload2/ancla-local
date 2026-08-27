@@ -72,6 +72,8 @@
     .split,
     .steps,
     .works-grid,
+    .models-grid,
+    .model,
     .offer-box { min-width: 0; max-width: 100%; }
     .eyebrow {
       display: inline-flex;
@@ -371,6 +373,28 @@
       grid-template-columns: 1.15fr 0.85fr;
       gap: 18px;
     }
+    .models-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin-top: 18px;
+    }
+    .model {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      padding: 22px;
+      display: grid;
+      gap: 10px;
+    }
+    .model p { color: var(--muted); font-size: 0.92rem; }
+    .model-kicker {
+      font-size: 0.72rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      font-weight: 600;
+      color: var(--copper-2);
+    }
 
     /* Offer */
     .offer {
@@ -452,7 +476,7 @@
       .nav-links { display: none; }
       .nav-cta { padding-inline: 0.85rem; }
       .nav-cta .btn-text { display: none; }
-      .hero-grid, .niche, .cards-3, .pillars, .steps, .split, .works-grid { grid-template-columns: 1fr; }
+      .hero-grid, .niche, .cards-3, .pillars, .steps, .split, .works-grid, .models-grid { grid-template-columns: 1fr; }
       .stats { grid-template-columns: 1fr; }
       .hero-figure, .hero-figure img, .niche img { min-height: 260px; }
       .hero-actions { flex-direction: column; align-items: stretch; }
@@ -699,7 +723,7 @@
         <div class="section-head">
           <p class="eyebrow">Trabajos</p>
           <h2>Páginas que se ven y se usan.</h2>
-          <p class="lede">Un recorte chico: landings para dueños que venden citas, clases o mesas. No un book de 40 mockups.</p>
+          <p class="lede">Un recorte chico: landings reales y tres modelos de tono. El contenido de los modelos es de ejemplo, para que veas el estilo.</p>
         </div>
         <div class="works-grid">
           <article class="work">
@@ -719,6 +743,30 @@
               <p>Esta misma página: una oferta, un WhatsApp, sin teatro de likes. El molde que usamos para un negocio de barrio.</p>
               <a class="work-link" href="#top">Estás aquí</a>
             </div>
+          </article>
+        </div>
+        <div class="section-head" style="margin-top:48px;margin-bottom:8px;">
+          <p class="eyebrow">Modelos</p>
+          <h2>Tres tonos. Eliges el que pega con tu negocio.</h2>
+        </div>
+        <div class="models-grid">
+          <article class="model">
+            <p class="model-kicker">01 · Interactivo</p>
+            <h3>Studio Pulse</h3>
+            <p>Para gym o coach: el visitante elige objetivo, ve un cupo y pide la clase. Se siente app, no folleto.</p>
+            <a class="work-link" href="modelos/interactivo.html">Abrir modelo →</a>
+          </article>
+          <article class="model">
+            <p class="model-kicker">02 · Visual</p>
+            <h3>Barrio Fuego</h3>
+            <p>Para comida: foto grande, poco texto, menú al deslizar. Se vende el plato antes que el párrafo.</p>
+            <a class="work-link" href="modelos/visual.html">Abrir modelo →</a>
+          </article>
+          <article class="model">
+            <p class="model-kicker">03 · Serio</p>
+            <h3>Consulta Norte</h3>
+            <p>Para clínica: claro, calmo, con horarios y primera valoración. Transmite confianza, no show.</p>
+            <a class="work-link" href="modelos/serio.html">Abrir modelo →</a>
           </article>
         </div>
       </div>

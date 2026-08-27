@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Modelo interactivo — Studio Pulse</title>
+  <meta name="robots" content="noindex" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    :root { --bg:#0a0f14; --ink:#e8f4ff; --muted:#8aa0b5; --acc:#3dffb0; --acc2:#18c8ff; --card:#121a22; }
+    * { box-sizing:border-box; margin:0; padding:0; }
+    body { font-family:"IBM Plex Sans",sans-serif; background:var(--bg); color:var(--ink); min-height:100vh; }
+    .bar { display:flex; justify-content:space-between; gap:12px; padding:14px 6vw; border-bottom:1px solid rgba(61,255,176,.2); font-size:13px; color:var(--muted); }
+    .bar a { color:var(--acc); text-decoration:none; }
+    .wrap { width:min(920px, calc(100% - 10vw)); margin:0 auto; padding:48px 0 80px; }
+    h1,h2 { font-family:"Space Grotesk",sans-serif; letter-spacing:-.04em; }
+    h1 { font-size:clamp(2rem,6vw,3.4rem); line-height:1.05; }
+    .lede { color:var(--muted); margin:14px 0 28px; max-width:40rem; }
+    .choices { display:grid; grid-template-columns:repeat(3,1fr); gap:10px; }
+    .choices button {
+      background:var(--card); color:var(--ink); border:1px solid rgba(255,255,255,.08);
+      border-radius:16px; padding:18px 12px; cursor:pointer; font:inherit; font-weight:600;
+    }
+    .choices button.on { border-color:var(--acc); box-shadow:0 0 0 1px var(--acc); color:var(--acc); }
+    .panel { margin-top:22px; background:var(--card); border-radius:20px; padding:22px; display:none; border:1px solid rgba(61,255,176,.18); }
+    .panel.show { display:block; }
+    .slots { display:flex; flex-wrap:wrap; gap:8px; margin-top:14px; }
+    .slots button { border:0; border-radius:999px; padding:10px 14px; cursor:pointer; background:#1a2630; color:var(--ink); font:inherit; }
+    .slots button.pick { background:var(--acc); color:#042015; font-weight:700; }
+    .cta { margin-top:22px; display:inline-flex; background:var(--acc); color:#042015; text-decoration:none; font-weight:700; padding:14px 20px; border-radius:999px; }
+    .note { margin-top:10px; font-size:13px; color:var(--muted); }
+    img { width:100%; height:220px; object-fit:cover; border-radius:18px; margin:22px 0; }
+    @media (max-width:700px) { .choices { grid-template-columns:1fr; } }
+  </style>
+</head>
+<body>
+  <div class="bar">
+    <span>Modelo Ancla · Interactivo · contenido de ejemplo</span>
+    <a href="../index.html#trabajos">← Volver a Ancla</a>
+  </div>
+  <main class="wrap">
+    <p style="color:var(--acc);font-weight:700;letter-spacing:.14em;text-transform:uppercase;font-size:12px;">Studio Pulse</p>
+    <h1>Elige cómo quieres entrenar.<br>Te mostramos el cupo.</h1>
+    <p class="lede">Demo de una web de gym o coach: el visitante toca, no solo lee. En un negocio real, el botón abre WhatsApp con el horario ya escrito.</p>
+    <img src="../assets/gym.jpg" alt="Gimnasio de ejemplo" />
+    <h2>¿Qué buscas este mes?</h2>
+    <div class="choices">
+      <button type="button" data-goal="fuerza">Fuerza</button>
+      <button type="button" data-goal="bajar">Bajar de peso</button>
+      <button type="button" data-goal="movil">Moverte sin dolor</button>
+    </div>
+    <div id="result" class="panel">
+      <h2 id="title"></h2>
+      <p id="copy" class="lede" style="margin:8px 0 0"></p>
+      <p style="margin-top:16px;font-weight:600;">Cupos de esta semana</p>
+      <div class="slots" id="slots"></div>
+      <a class="cta" id="wa" href="#">Pedir este cupo por WhatsApp</a>
+      <p class="note">En el cliente real, el mensaje sale armado: nombre del pack + día.</p>
+    </div>
+  </main>
+  <script>
+    const data = {
+      fuerza: { t: "Pack fuerza · 3 días", c: "Técnica primero, carga después. Clases de 50 min. Ideal si ya puedes hacer sentadilla con criterio." },
+      bajar: { t: "Pack constante · 4 días", c: "Fuerza + caminata. Sin cardio de castigo. Medimos cintura y energía, no solo la báscula." },
+      movil: { t: "Pack suave · 2 días", c: "Movilidad y fuerza ligera. Para volver después de un parón o una molestia (con alta médica si aplica)." }
+    };
+    const hours = ["Mar 18:00", "Mié 07:30", "Jue 19:00", "Sáb 10:00"];
+    let goal = "", slot = "";
+    document.querySelectorAll("[data-goal]").forEach((b) => {
+      b.onclick = () => {
+        document.querySelectorAll("[data-goal]").forEach((x) => x.classList.remove("on"));
+        b.classList.add("on");
+        goal = b.dataset.goal;
+        const d = data[goal];
+        document.getElementById("title").textContent = d.t;
+        document.getElementById("copy").textContent = d.c;
+        document.getElementById("result").classList.add("show");
+        const box = document.getElementById("slots");
+        box.innerHTML = hours.map((h) => `<button type="button">${h}</button>`).join("");
+        box.querySelectorAll("button").forEach((s) => {
+          s.onclick = () => {
+            box.querySelectorAll("button").forEach((x) => x.classList.remove("pick"));
+            s.classList.add("pick");
+            slot = s.textContent;
+            update();
+          };
+        });
+        update();
+      };
+    });
+    function update() {
+      const msg = encodeURIComponent(`Hola Studio Pulse, quiero ${data[goal].t}${slot ? " el " + slot : ""}.`);
+      document.getElementById("wa").href = "https://wa.me/56959128603?text=" + msg;
+    }
+  </script>
+</body>
+</html>
