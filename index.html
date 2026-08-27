@@ -71,6 +71,7 @@
     .pillars,
     .split,
     .steps,
+    .works-grid,
     .offer-box { min-width: 0; max-width: 100%; }
     .eyebrow {
       display: inline-flex;
@@ -333,6 +334,44 @@
     .yes li::before { content: "→"; position: absolute; left: 0; color: var(--copper); }
     .no li::before { content: "×"; position: absolute; left: 0; color: var(--copper-2); }
 
+    /* Works */
+    .work {
+      background: var(--paper);
+      border-radius: 24px;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      display: grid;
+      grid-template-rows: auto 1fr;
+    }
+    .work img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      object-position: center 18%;
+      background: #0b0c0f;
+    }
+    .work-body { padding: 22px 22px 24px; display: grid; gap: 8px; align-content: start; }
+    .work-body p { color: var(--muted); font-size: 0.95rem; }
+    .work-tag {
+      font-size: 0.72rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      font-weight: 600;
+      color: var(--copper-2);
+    }
+    .work a.work-link {
+      color: var(--copper);
+      font-weight: 600;
+      text-decoration: none;
+      margin-top: 6px;
+    }
+    .work a.work-link:hover { color: var(--copper-2); }
+    .works-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 18px;
+    }
+
     /* Offer */
     .offer {
       background:
@@ -413,7 +452,7 @@
       .nav-links { display: none; }
       .nav-cta { padding-inline: 0.85rem; }
       .nav-cta .btn-text { display: none; }
-      .hero-grid, .niche, .cards-3, .pillars, .steps, .split { grid-template-columns: 1fr; }
+      .hero-grid, .niche, .cards-3, .pillars, .steps, .split, .works-grid { grid-template-columns: 1fr; }
       .stats { grid-template-columns: 1fr; }
       .hero-figure, .hero-figure img, .niche img { min-height: 260px; }
       .hero-actions { flex-direction: column; align-items: stretch; }
@@ -457,6 +496,7 @@
           <li><a href="#sistema">Sistema</a></li>
           <li><a href="#para-quien">Para quién</a></li>
           <li><a href="#metodo">Método</a></li>
+          <li><a href="#trabajos">Trabajos</a></li>
           <li><a href="#faq">FAQ</a></li>
         </ul>
       </nav>
@@ -650,6 +690,36 @@
               <li>Bots que contestan y espantan al paciente.</li>
             </ul>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="trabajos">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="eyebrow">Trabajos</p>
+          <h2>Páginas que se ven y se usan.</h2>
+          <p class="lede">Un recorte chico: landings para dueños que venden citas, clases o mesas. No un book de 40 mockups.</p>
+        </div>
+        <div class="works-grid">
+          <article class="work">
+            <img src="assets/work-gary.jpg" alt="Landing de Gary Felicien Fit: coach de entrenamiento" />
+            <div class="work-body">
+              <p class="work-tag">Trainer · guía de 12 semanas</p>
+              <h3>GaryFelicienFit</h3>
+              <p>Web de oferta para un coach: guía de nutrición y entrenamiento a USD $40, coaching 1:1 y videos. El plan no se publica en la página; se entrega por correo.</p>
+              <a class="work-link" href="https://garyfelicienfit.netlify.app/" target="_blank" rel="noopener noreferrer">Ver sitio →</a>
+            </div>
+          </article>
+          <article class="work">
+            <img src="assets/hero.jpg" alt="Landing de Ancla para negocios locales" />
+            <div class="work-body">
+              <p class="work-tag">Captación local</p>
+              <h3>Ancla</h3>
+              <p>Esta misma página: una oferta, un WhatsApp, sin teatro de likes. El molde que usamos para un negocio de barrio.</p>
+              <a class="work-link" href="#top">Estás aquí</a>
+            </div>
+          </article>
         </div>
       </div>
     </section>
