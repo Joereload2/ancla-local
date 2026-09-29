@@ -4,9 +4,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Ancla — Te escuchamos primero. Después te ayudamos a vender más</title>
-  <meta name="description" content="Ancla asesora negocios: anuncios, páginas web, embudos y ofertas que se venden por internet. Producto físico, digital o servicio. También visibilidad en tu barrio." />
+  <meta name="description" content="Asesoría para negocios de barrio: anuncios, página web y una oferta clara para vender online y en tu zona. Producto físico, digital o servicio." />
   <meta property="og:title" content="Ancla — Te escuchamos primero. Después te ayudamos a vender más" />
-  <meta property="og:description" content="Anuncios, páginas, embudos y ofertas para vender online y en tu zona. Físico, digital o servicio." />
+  <meta property="og:description" content="Te escuchamos primero. Después te ayudamos a vender más, online y en tu barrio: anuncios, página web y una oferta clara." />
   <meta property="og:image" content="assets/logo.png" />
   <meta property="og:type" content="website" />
   <meta name="theme-color" content="#05172B" />
@@ -114,13 +114,16 @@
     h1 { font-size: clamp(2.05rem, 4.6vw, 3.15rem); text-wrap: balance; }
     .hero-promise {
       font-family: Fraunces, Georgia, serif;
-      font-size: clamp(1.12rem, 2vw, 1.38rem);
+      font-size: clamp(1.28rem, 2.6vw, 1.72rem);
       font-weight: 500;
       font-style: italic;
-      line-height: 1.35;
+      line-height: 1.3;
       letter-spacing: -0.02em;
+      color: var(--ink);
+    }
+    .hero-rubros {
+      font-size: 0.92rem;
       color: var(--muted);
-      max-width: 28rem;
     }
     .hero-promise em {
       font-style: italic;
@@ -722,8 +725,7 @@
       </a>
       <nav id="site-nav" class="nav-panel" aria-label="Secciones">
         <ul class="nav-links">
-          <li><a href="#sistema">Qué hacemos</a></li>
-          <li><a href="#ejemplos">Ejemplos</a></li>
+          <li><a href="#que-hacemos">Qué hacemos</a></li>
           <li><a href="#para-quien">Para quién</a></li>
           <li><a href="#metodo">Método</a></li>
           <li><a href="#trabajos">Trabajos</a></li>
@@ -751,13 +753,14 @@
             <h1>Te escuchamos primero.</h1>
             <p class="hero-promise">Después te ayudamos a vender más, <em>online y en tu barrio.</em></p>
           </div>
-          <p class="lede">En Ancla te asesoramos y nos adaptamos a tu negocio: anuncios, páginas web, embudos y la forma de armar productos y ofertas que se vendan por internet. Sea un producto físico, digital o un servicio.</p>
+          <p class="lede">En Ancla nos adaptamos a tu negocio. Te ayudamos con anuncios, tu página web y una oferta clara que la gente pueda comprar por internet, ya sea un producto físico, digital o un servicio.</p>
+          <p class="hero-rubros">Para negocios de barrio: salud, comida, entrenadores, servicios y más.</p>
           <div class="hero-actions">
             <a class="btn btn-wa" data-wa>
               <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20 11.5A8.5 8.5 0 0 1 7.4 18.9L3.8 20l1.2-3.5A8.5 8.5 0 1 1 20 11.5Zm-8.5-7A7 7 0 0 0 6 16.7l-.7 2 2.1-.6A7 7 0 1 0 11.5 4.5Z"/></svg>
               Pedir diagnóstico por WhatsApp
             </a>
-            <a class="btn btn-ghost" href="#sistema">Qué hacemos</a>
+            <a class="btn btn-ghost" href="#que-hacemos">Qué hacemos</a>
           </div>
           <ul class="trust">
             <li>Diagnóstico gratis</li>
@@ -769,15 +772,15 @@
           <img src="assets/hero.jpg" alt="Calle de barrio al atardecer, con locales abiertos y mesas en la acera" />
           <figcaption class="hero-chip">
             <strong>Online y barrio.</strong>
-            Ads, página u oferta. Lo que tu negocio necesita para vender.
+            Anuncios, página u oferta. Lo que tu negocio necesita para vender.
           </figcaption>
         </figure>
       </div>
       <div class="wrap">
         <div class="stats">
           <div class="stat"><b>15 min</b><span>Diagnóstico por WhatsApp. Te escuchamos primero.</span></div>
-          <div class="stat"><b>Un canal</b><span>Ads, página, barrio o los tres. El que venda.</span></div>
-          <div class="stat"><b>Citas, no likes</b><span>Si no trae clientes, se corta. Sin teatro de alcance.</span></div>
+          <div class="stat"><b>Online y barrio</b><span>Anuncios, página u oferta. Lo que tu negocio necesita.</span></div>
+          <div class="stat"><b>Clientes, no solo vistas</b><span>Si no trae gente, lo ajustamos. Sin promesas de más.</span></div>
         </div>
       </div>
     </section>
@@ -786,95 +789,68 @@
       <div class="wrap">
         <div class="section-head">
           <p class="eyebrow">El problema</p>
-          <h2>Publicar todos los días no llena el consultorio.</h2>
-          <p class="lede">El community manager entrega el calendario. Tú sigues esperando el teléfono. Eso no es un canal de ventas. Es un mural.</p>
+          <h2>Publicar todos los días no llena el local.</h2>
+          <p class="lede">Se publica, se anuncian cosas, y el teléfono sigue quieto. Falta una oferta clara y un camino para que te escriban.</p>
         </div>
         <div class="cards-3">
           <article class="card">
             <span class="num">01</span>
-            <h3>El local se ve lleno en fotos y vacío en martes.</h3>
-            <p>El contenido enseña el plato, la silla o el gym. No pide la reserva, la valoración ni la clase de prueba.</p>
+            <h3>El local se ve lleno en fotos y vacío entre semana.</h3>
+            <p>El contenido muestra el plato o el local. No invita a reservar, pedir o probar.</p>
           </article>
           <article class="card">
             <span class="num">02</span>
-            <h3>Los ads se ven. Nadie escribe.</h3>
-            <p>Se pauta “a gente que le gusta el fitness” o “salud”. Eso no es un vecino con dolor de muela a 12 cuadras.</p>
+            <h3>Los anuncios se ven. Casi nadie escribe.</h3>
+            <p>Se muestra el negocio, pero no hay un siguiente paso claro para quien está cerca.</p>
           </article>
           <article class="card">
             <span class="num">03</span>
-            <h3>Escriben y el chat se enfría.</h3>
-            <p>Sin oferta, sin horario, sin siguiente paso. El lead muere entre “¿precio?” y el silencio de las 9 de la noche.</p>
+            <h3>Escriben y la conversación se enfría.</h3>
+            <p>Sin oferta, sin horario, sin qué responder. El chat queda en “¿precio?” y no avanza.</p>
           </article>
         </div>
       </div>
     </section>
 
-    <section class="system" id="sistema">
+    <section class="system" id="que-hacemos">
       <div class="wrap">
         <div class="section-head">
           <p class="eyebrow">Qué hacemos</p>
           <h2>Nos adaptamos a tu negocio. No al revés.</h2>
-          <p class="lede">Anuncios, páginas, embudos y la forma de armar lo que vendes. Online y en tu barrio.</p>
+          <p class="lede">Cuatro piezas. Usamos las que tu negocio necesita para vender, online y en tu barrio.</p>
         </div>
         <div class="pillars">
           <article class="pillar">
             <div class="icon-box" aria-hidden="true">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 7h12v13H6z"/><path d="M9 7V5h6v2"/></svg>
             </div>
-            <h3>Productos y ofertas que se venden</h3>
-            <p>Te asesoramos para convertir lo que haces en algo fácil de vender por internet, sea un producto físico, digital o un servicio. Por ejemplo, armar una suscripción, un pack o una oferta recurrente, definir cómo presentarlo y cuánto cobrar.</p>
+            <h3>Asesoría de oferta y producto</h3>
+            <p>Te ayudamos a armar lo que vendes: pack, suscripción o sesión. Claro, con precio y fácil de comprar por internet.</p>
           </article>
           <article class="pillar">
             <div class="icon-box" aria-hidden="true">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="3"/><circle cx="12" cy="12" r="8" stroke-dasharray="4 3"/></svg>
             </div>
-            <h3>Visibilidad en tu zona</h3>
-            <p>Para negocios de comida, tiendas y locales: hacemos que los vecinos y las personas que pasan por tu sector sepan que existes. Anuncios de radio corto, contenido local y un camino directo para que te escriban, reserven o pasen a comprar.</p>
+            <h3>Anuncios</h3>
+            <p>Anuncios en Meta a gente de tu zona. El aviso pide escribirte, reservar o comprar; no solo mirar.</p>
           </article>
           <article class="pillar">
             <div class="icon-box" aria-hidden="true">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="4" y="5" width="16" height="14" rx="2"/><path d="M8 9h8M8 13h5"/></svg>
             </div>
-            <h3>Ads, páginas web, embudos y asesoría</h3>
-            <p>No un calendario de 30 posts. Piezas que muestran el resultado y el siguiente paso. Meta Ads con radio corto. El anuncio manda a WhatsApp con un mensaje ya escrito. Tú (o tu recepción) tienen un guion: responder, agendar, no negociar a ciegas.</p>
+            <h3>Página web</h3>
+            <p>Una página simple que explica la oferta y manda a WhatsApp. Se entiende en un minuto.</p>
           </article>
           <article class="pillar">
             <div class="icon-box" aria-hidden="true">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 5v14M5 12h14"/></svg>
             </div>
-            <h3>Diagnóstico y corte semanal</h3>
-            <p>Diagnóstico, oferta en una frase, pauta controlada y corte semanal de lo que trae clientes. Si una pieza falta, las otras se desperdician. Por eso no vendemos “manejo de redes” suelto.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section id="ejemplos">
-      <div class="wrap">
-        <div class="section-head">
-          <p class="eyebrow">Ejemplos</p>
-          <h2>Cómo podemos ayudarte</h2>
-          <p class="lede">Tres situaciones habituales. Si te ves en una, conversemos.</p>
-        </div>
-        <div class="cards-3">
-          <article class="card">
-            <p class="kicker">Producto o servicio</p>
-            <h3>Tienes un producto, pero no sabes cómo venderlo online</h3>
-            <p>Te ayudamos a definir la oferta, el precio y el formato (incluso una suscripción) y a montar la página y el embudo para venderlo.</p>
-          </article>
-          <article class="card">
-            <p class="kicker">Local de barrio</p>
-            <h3>Tienes un local de comida y quieres que tu barrio te conozca</h3>
-            <p>Anuncios a personas de tu sector, contenido que muestre tu carta y un botón directo para pedir o reservar por WhatsApp.</p>
-          </article>
-          <article class="card">
-            <p class="kicker">Ya vendes</p>
-            <h3>Ya vendes, pero no de forma constante</h3>
-            <p>Revisamos qué falla (oferta, anuncio o atención) y ajustamos el plan.</p>
+            <h3>Cierre en WhatsApp</h3>
+            <p>Un mensaje ya escrito y un guion para responder, agendar y no dejar el chat en “¿precio?”.</p>
           </article>
         </div>
         <div class="band">
-          <p><strong>¿Te ves en alguno?</strong> 15 minutos por WhatsApp. Te escuchamos primero.</p>
+          <p><strong>¿Te suena?</strong> 15 minutos por WhatsApp. Te escuchamos primero.</p>
           <a class="btn btn-wa" data-wa>Pedir diagnóstico</a>
         </div>
       </div>
@@ -884,36 +860,36 @@
       <div class="wrap">
         <div class="section-head">
           <p class="eyebrow">Para quién</p>
-          <h2>Para negocios que quieren vender más, en su zona y por internet.</h2>
-          <p class="lede">Trabajamos con negocios de comida, tiendas, clínicas, gimnasios, coaches y emprendedores que venden productos físicos, digitales o servicios. Si quieres que más gente te encuentre y te compre, conversemos.</p>
+          <h2>Para negocios de barrio que quieren vender más.</h2>
+          <p class="lede">Estos son algunos ejemplos. Si tu rubro no está, igual conversemos: nos adaptamos al negocio, no al revés.</p>
         </div>
         <div class="niche-grid">
           <article class="niche">
             <img src="assets/food.jpg" alt="Servicio de almuerzo en un restaurante local" />
             <div class="niche-body">
               <h3>Comida, tiendas y locales</h3>
-              <p>Que el barrio te conozca y sepa cómo pedir, reservar o pasar a comprar. Radio corto, no audiencia de otro país.</p>
+              <p>Que el barrio te conozca y sepa cómo pedir, reservar o pasar a comprar.</p>
             </div>
           </article>
           <article class="niche">
             <img src="assets/dental.jpg" alt="Recepción de un consultorio" />
             <div class="niche-body">
-              <h3>Clínicas y servicios</h3>
-              <p>Agenda, valoración o primera cita. El anuncio pide un siguiente paso, no un like al tratamiento.</p>
+              <h3>Salud y servicios</h3>
+              <p>Agenda, valoración o primera cita. El anuncio pide un siguiente paso, no solo una mirada.</p>
             </div>
           </article>
           <article class="niche">
             <img src="assets/gym.jpg" alt="Entrenador con un alumno en un gym de barrio" />
             <div class="niche-body">
-              <h3>Gimnasios y coaches</h3>
-              <p>Planes, clases y acompañamiento. Convertimos lo que haces en una oferta clara y un WhatsApp que cierra.</p>
+              <h3>Gimnasios y entrenadores</h3>
+              <p>Planes, clases y acompañamiento. Una oferta clara y un WhatsApp para agendar.</p>
             </div>
           </article>
           <article class="niche">
             <img src="assets/coach.jpg" alt="Sesión de trabajo con un emprendedor" />
             <div class="niche-body">
-              <h3>Productos físicos, digitales o un servicio</h3>
-              <p>Si se puede vender por internet —pack, suscripción o sesión— te ayudamos a armarlo, presentarlo y cobrarlo.</p>
+              <h3>Producto físico, digital o un servicio</h3>
+              <p>Si se puede vender por internet —pack, suscripción o sesión— te ayudamos a armarlo y presentarlo.</p>
             </div>
           </article>
         </div>
@@ -924,28 +900,28 @@
       <div class="wrap">
         <div class="section-head">
           <p class="eyebrow">Método</p>
-          <h2>De la calle al chat, en cuatro pasos.</h2>
+          <h2>Cuatro pasos. Primero te escuchamos.</h2>
         </div>
         <div class="steps">
           <article class="step">
             <span class="step-n" aria-hidden="true">1</span>
-            <h3>Diagnóstico</h3>
+            <h3>Te escuchamos</h3>
             <p>15 min por WhatsApp. Qué vendes, a quién, en qué zona, qué pasa cuando alguien escribe.</p>
           </article>
           <article class="step">
             <span class="step-n" aria-hidden="true">2</span>
             <h3>Oferta</h3>
-            <p>Una oferta que se puede decir en una frase. Valoración, clase de prueba, mesa del martes. Sin eso, el ad es ruido.</p>
+            <p>Una frase clara: valoración, clase de prueba, pack o menú del martes. Sin eso, el anuncio no sabe qué pedir.</p>
           </article>
           <article class="step">
             <span class="step-n" aria-hidden="true">3</span>
-            <h3>Pauta</h3>
-            <p>Creativos + radio + presupuesto chico y controlado. El anuncio pide una acción, no “síguenos”.</p>
+            <h3>Anuncios y página</h3>
+            <p>Lo necesario para que te encuentren y te escriban. El aviso pide una acción, no solo un “síguenos”.</p>
           </article>
           <article class="step">
             <span class="step-n" aria-hidden="true">4</span>
-            <h3>Corte semanal</h3>
-            <p>Se queda lo que trae citas. Se mata lo que solo consigue corazones. Tú ves números de gente, no de vanidad.</p>
+            <h3>Revisión semanal</h3>
+            <p>Se queda lo que trae clientes. Se ajusta lo que no. Tú ves gente, no solo vistas.</p>
           </article>
         </div>
 
@@ -953,21 +929,21 @@
           <div class="panel yes">
             <h3>Esto sí.</h3>
             <ul>
-              <li>Una oferta por campaña. Una.</li>
-              <li>Público a distancia de tu local o de tu cita.</li>
-              <li>WhatsApp como mostrador, no como buzón.</li>
-              <li>Presupuesto de ads que el negocio puede sostener.</li>
-              <li>Revisión semanal: citas, costo, qué se corta.</li>
+              <li>Te escuchamos antes de proponer nada.</li>
+              <li>Una oferta clara por campaña.</li>
+              <li>Gente cerca de tu local o de tu cita.</li>
+              <li>WhatsApp para atender, no para acumular mensajes.</li>
+              <li>Presupuesto de anuncios que puedas sostener.</li>
             </ul>
           </div>
           <div class="panel no">
             <h3>Esto no.</h3>
             <ul>
-              <li>Community manager de 30 posts “para el algoritmo”.</li>
-              <li>Campañas a todo el país “por si acaso”.</li>
-              <li>Informes de alcance, impresiones y “engagement”.</li>
-              <li>Contratos de 12 meses para “construir marca”.</li>
-              <li>Bots que contestan y espantan al paciente.</li>
+              <li>Un calendario de posts sin un plan para vender.</li>
+              <li>Anuncios a todo el país “por si acaso”.</li>
+              <li>Informes de vistas y corazones, sin citas ni pedidos.</li>
+              <li>Contratos largos para “construir marca” sin vender.</li>
+              <li>Respuestas automáticas que alejan a quien escribe.</li>
             </ul>
           </div>
         </div>
@@ -979,7 +955,7 @@
         <div class="section-head">
           <p class="eyebrow">Trabajos</p>
           <h2>Páginas que se ven y se usan.</h2>
-          <p class="lede">Un recorte chico: landings reales y tres modelos de tono. El contenido de los modelos es de ejemplo, para que veas el estilo.</p>
+          <p class="lede">Un recorte chico: un sitio real y tres modelos de tono. El contenido de los modelos es de ejemplo, para que veas el estilo.</p>
         </div>
         <div class="works-grid">
           <article class="work">
@@ -994,9 +970,9 @@
           <article class="work">
             <img src="assets/hero.jpg" alt="Landing de Ancla para negocios locales" />
             <div class="work-body">
-              <p class="work-tag">Captación local</p>
+              <p class="work-tag">Negocio de barrio</p>
               <h3>Ancla</h3>
-              <p>Esta misma página: una oferta, un WhatsApp, sin teatro de likes. El molde que usamos para un negocio de barrio.</p>
+              <p>Esta misma página: una oferta, un WhatsApp, un siguiente paso claro. El molde para un negocio de barrio.</p>
               <a class="work-link" href="#top">Estás aquí</a>
             </div>
           </article>
@@ -1033,7 +1009,7 @@
         <div class="offer-box">
           <p class="eyebrow">Siguiente paso</p>
           <h2>Diagnóstico gratis. 15 minutos. Por WhatsApp.</h2>
-          <p class="lede">Nos escribes, te pedimos tres datos (rubro, zona, qué pasa hoy cuando alguien contacta) y te decimos si Ancla sirve o si todavía no. Si no hay fit, te lo decimos en esa misma conversación.</p>
+          <p class="lede">Nos escribes, te pedimos tres datos (rubro, zona, qué pasa hoy cuando alguien contacta) y te decimos si Ancla sirve o si todavía no. En esa misma conversación.</p>
           <div class="hero-actions">
             <a class="btn btn-wa" data-wa>Escribir a Ancla ahora</a>
           </div>
@@ -1054,35 +1030,35 @@
         </details>
         <details>
           <summary>Tengo un producto, pero no sé cómo venderlo online. ¿Me ayudan?</summary>
-          <p>Sí. Te asesoramos en cómo estructurarlo, presentarlo y fijar el precio, incluso en formatos como una suscripción o un pack recurrente.</p>
+          <p>Sí. Te asesoramos en cómo armarlo, presentarlo y fijar el precio, incluso como suscripción o pack.</p>
         </details>
         <details>
           <summary>Tengo un negocio de comida. ¿Cómo me ayudan a que me conozca mi barrio?</summary>
-          <p>Con anuncios dirigidos a las personas de tu sector, contenido pensado para que te vean y un camino simple para que te escriban, pidan o reserven.</p>
+          <p>Con anuncios a personas de tu sector, una oferta clara y un camino simple para que te escriban, pidan o reserven.</p>
         </details>
         <details>
           <summary>¿También manejan Instagram y Facebook?</summary>
-          <p>Sí, como soporte del embudo. No como un mural bonito. Publicamos lo que empuja la oferta y el anuncio. Si lo que quieres es “presencia”, hay agencias más baratas y más lentas.</p>
+          <p>Sí, como apoyo de la oferta y los anuncios. No como un mural de fotos sueltas.</p>
         </details>
         <details>
           <summary>¿Cuánto hay que invertir en anuncios?</summary>
-          <p>Lo suficiente para aprender en tu zona, no para “escalar”. En la práctica, un negocio local suele empezar en un rango que puede pagar sin poner en riesgo la caja. El número exacto sale del diagnóstico: rubro, ticket y radio. El presupuesto de ads es tuyo; Ancla no se lo queda.</p>
+          <p>Lo suficiente para aprender en tu zona, no para gastar de más. El número sale del diagnóstico: rubro, precio y radio. El presupuesto de anuncios es tuyo; Ancla no se lo queda.</p>
         </details>
         <details>
           <summary>¿Trabajan con negocios chicos, de una sola persona?</summary>
-          <p>Sí, si hay una oferta clara y alguien que conteste WhatsApp. Si el dueño no puede responder en el día, primero arreglamos eso. Un embudo hacia un chat muerto es un lujo inútil.</p>
+          <p>Sí, si hay una oferta clara y alguien que conteste WhatsApp. Si no puedes responder en el día, primero arreglamos eso.</p>
         </details>
         <details>
           <summary>¿En cuánto tiempo se ve algo?</summary>
-          <p>Los primeros mensajes pueden llegar en días, no en un trimestre de “branding”. Citas estables piden unas semanas de corte: qué creativo, qué horario, qué oferta. No prometemos un número mágico en la landing. El diagnóstico es para no venderte humo.</p>
+          <p>Los primeros mensajes pueden llegar en días. Para que se estabilice, hace falta unas semanas de revisión. No prometemos un número mágico: el diagnóstico es para ser claros.</p>
         </details>
         <details>
           <summary>¿Y si mi rubro no está en la lista?</summary>
-          <p>Si quieres vender más en tu zona o por internet —comida, tienda, clínica, gym, un servicio o un producto digital— conversemos. El diagnóstico es para ver si hay fit, no para encajarte en una plantilla.</p>
+          <p>Si quieres vender más en tu zona o por internet, conversemos. El diagnóstico es para ver si hay fit, no para encajarte en una plantilla.</p>
         </details>
         <details>
           <summary>¿Me van a pedir 12 historias al día?</summary>
-          <p>No. Pedimos lo mínimo que haga falta para el anuncio y la prueba social. El dueño no es un medio de comunicación. Es un negocio.</p>
+          <p>No. Pedimos lo mínimo que haga falta para el anuncio y para que la gente confíe. Tú tienes un negocio, no un canal de contenido.</p>
         </details>
       </div>
     </section>
