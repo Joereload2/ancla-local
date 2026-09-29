@@ -111,21 +111,22 @@
     }
 
     h1, h2, h3 { font-family: Fraunces, Georgia, serif; font-weight: 550; letter-spacing: -0.03em; line-height: 1.12; }
-    h1 { font-size: clamp(2.15rem, 5.4vw, 3.55rem); text-wrap: balance; }
-    h1 .h1-sub {
-      display: block;
-      margin-top: 0.4em;
-      font-size: 0.58em;
+    h1 { font-size: clamp(2.05rem, 4.6vw, 3.15rem); text-wrap: balance; }
+    .hero-promise {
+      font-family: Fraunces, Georgia, serif;
+      font-size: clamp(1.12rem, 2vw, 1.38rem);
       font-weight: 500;
+      font-style: italic;
+      line-height: 1.35;
       letter-spacing: -0.02em;
-      line-height: 1.28;
-      color: var(--ink);
-      text-wrap: pretty;
+      color: var(--muted);
+      max-width: 28rem;
     }
-    h1 .h1-sub em {
+    .hero-promise em {
       font-style: italic;
       color: var(--copper-2);
       font-weight: 500;
+      white-space: nowrap;
     }
     h2 { font-size: clamp(1.7rem, 3.6vw, 2.7rem); text-wrap: balance; }
     h3 { font-size: 1.28rem; }
@@ -256,6 +257,7 @@
       align-items: end;
     }
     .hero-copy { display: grid; gap: 18px; padding-bottom: 8px; }
+    .hero-title { display: grid; gap: 10px; }
     .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; }
     .trust {
       display: flex;
@@ -745,7 +747,10 @@
       <div class="wrap hero-grid">
         <div class="hero-copy">
           <p class="eyebrow">Asesoría para vender más</p>
-          <h1>Te escuchamos primero.<span class="h1-sub">Después te ayudamos a vender más, <em>online y en tu barrio.</em></span></h1>
+          <div class="hero-title">
+            <h1>Te escuchamos primero.</h1>
+            <p class="hero-promise">Después te ayudamos a vender más, <em>online y en tu barrio.</em></p>
+          </div>
           <p class="lede">En Ancla te asesoramos y nos adaptamos a tu negocio: anuncios, páginas web, embudos y la forma de armar productos y ofertas que se vendan por internet. Sea un producto físico, digital o un servicio.</p>
           <div class="hero-actions">
             <a class="btn btn-wa" data-wa>
